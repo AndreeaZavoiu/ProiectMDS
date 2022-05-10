@@ -1,0 +1,33 @@
+<p>llalall</p>
+<div class="container">
+    <h1>
+      {{ title }}
+    </h1>
+  
+    <form [formGroup]="angajatForm" class="angajat-form">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Nume</mat-label>
+        <input matInput placeholder="Nume" formControlName="nume">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Prenume</mat-label>
+        <input matInput placeholder="Prenume" formControlName="prenume">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Varsta</mat-label>
+        <input matInput placeholder="Varsta" formControlName="varsta">
+      </mat-form-field>
+    </form>
+  
+    <div class="actions">
+      <div class="button-wrapper" (click)="closeDialog()" appBtnHover>
+        Cancel
+      </div>
+  
+      <div *ngIf="!data.angajat" class="button-wrapper" (click)="saveData()" appBtnHover>
+        Save
+      </div>
+    </div>
+  </div>
+  
