@@ -1,0 +1,76 @@
+<app-header></app-header>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="d-flex justify-content-between p-3">
+      <div class="image">
+        <img src="https://cdn.pixabay.com/photo/2018/08/31/11/17/quiz-3644414_1280.png" width="90" />
+
+
+      </div>
+      <div class="quiz-header">
+        <h4 style="font-family: cursive;">Intrebari din domenii diverse!</h4>
+        <span style="font-family: italic;">Bine ai venit, {{name}}!</span>
+      </div>
+    </div>
+
+    <ng-container *ngIf="!isQuizCompleted">
+      <div class="d-flex justify-content-around py-3">
+        <div class="score">
+          <h5>{{points}} puncte</h5>
+        </div>
+
+        <div class="question-remain">
+          <span style="font-style: italic;"> Intrebarea {{currentQuestion+1}} din {{questionList.length}} </span>
+        </div>
+
+        <div class="timer">
+          <h5>{{counter}} secunde </h5>
+        </div>
+      </div>
+
+      <div class="progress mb-3">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width': progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <div class="question">
+        <div class="card">
+          <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+        </div>
+      </div>
+
+      <div class="options">
+        <ol *ngFor="let option of questionList[currentQuestion]?.options">
+          <li (click)="answer(currentQuestion+1, option)">
+            <div appChangeBg [isCorrect]="option.correct" class="card">
+              {{option.text}}
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"> <i class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i> </button>
+        <button class="btn" (click)="resetQuiz()"> <i class="fa text-primary fa-refresh fa-3x" aria-hidden="true"></i></button>
+        <button class="btn" (click)="nextQuestion()"> <i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i> </button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isQuizCompleted">
+      <div class="row d-flex justify-content-between">
+        <img style="width: 50%; " class="img-fluid col-sm-12 mx-auto" src="https://cdn.pixabay.com/photo/2021/05/24/23/37/party-6280846_1280.png" alt="" />
+        <div class="result text-center col-md-6 col-sm-12">
+          <h1> Felicitari! <br /> Acesta este rezultatul: </h1>
+          <h3>
+            <p> Totalul intrebarilor: {{questionList.length}} </p>
+            <p> Raspunsuri corecte: {{correctAnswer}} </p>
+            <p> Raspunsuri gresite: {{incorrectAnswer}} </p>
+            <p> Scorul final: {{points}} Puncte </p>
+          </h3>
+
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+</body>

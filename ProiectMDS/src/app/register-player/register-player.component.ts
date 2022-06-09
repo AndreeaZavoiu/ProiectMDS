@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Inject } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-register-player',
@@ -9,7 +10,26 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./register-player.component.css']
 })
 export class RegisterPlayerComponent implements OnInit {
+  constructor(private companyService: ApiService) { }
 
+  register;
+
+  ngOnInit() {
+    this.register = {
+        username : '',
+        password : '',
+        email : ''
+    }
+  }
+
+  registerPlayer() {
+    this.companyService.registerPlayer(this.register).subscribe( //registerCompany returneaza un observable => de aceea trb subscribe
+      response => {
+          alert('Company ' + this.register.username + ' has been registered!');
+      }, error => console.log('error', error)
+    )
+  }
+/*
   public title: string;
   public angajatForm: FormGroup = new FormGroup({
     nume: new FormControl(''),
@@ -50,4 +70,6 @@ export class RegisterPlayerComponent implements OnInit {
 //      this.dialogRef.close(this.angajatForm.value);
 //    });
   }
+*/
+
 }
