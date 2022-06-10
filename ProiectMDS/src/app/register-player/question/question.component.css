@@ -1,0 +1,32 @@
+.card{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+li .card:hover{
+    border: 1px solid blue;
+}
+
+ol{
+    padding: 0;
+}
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2020/07/08/11/07/imagination-5383470_1280.jpg");
+  background-color: forestgreen;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  border: 3px solid aquamarine;
+  padding: 10px;
+  background: rgb(152, 205, 187);
+}
