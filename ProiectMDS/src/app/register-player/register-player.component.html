@@ -1,0 +1,85 @@
+
+<div class="registerPlayer">
+  <input [(ngModel)]="register.email" placeholder="email">
+  <input [(ngModel)]="register.username" placeholder="username">
+  <input [(ngModel)]="register.password" placeholder="password" type="password">
+  
+  <button (click)="registerPlayer">Register as Player</button>
+</div>
+
+
+<footer>
+  <div class="container">
+    
+    <div class="col-sm-2">
+      <h5>The company</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Packt publisher</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-2">
+      <h5>Social</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-2">
+      <h5>Support</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy police</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Help desk</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <address>
+        <strong>Name, Inc.</strong>
+        Address line 1<br>
+        Address line 2<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+      </address>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- 
+<div class="container">
+    <h1>
+      {{ title }}
+    </h1>
+  
+    <form [formGroup]="angajatForm" class="angajat-form">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Nume</mat-label>
+        <input matInput placeholder="Nume" formControlName="nume">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Prenume</mat-label>
+        <input matInput placeholder="Prenume" formControlName="prenume">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Varsta</mat-label>
+        <input matInput placeholder="Varsta" formControlName="varsta">
+      </mat-form-field>
+    </form>
+  
+    <div class="actions">
+      <div class="button-wrapper" (click)="closeDialog()" appBtnHover>
+        Cancel
+      </div>
+  
+      <div *ngIf="!data.angajat" class="button-wrapper" (click)="saveData()" appBtnHover>
+        Save
+      </div>
+    </div>
+  </div>
+   -->

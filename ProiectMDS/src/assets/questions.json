@@ -1,0 +1,185 @@
+{
+  "questions": [
+    {
+      "questionText": "Care este cel mai lung fluviu din Europa?",
+      "options": [
+        {
+          "text": "Volga",
+          "correct": true
+        },
+        {
+          "text": "Nil"
+        },
+        {
+          "text": "Dunarea"
+        },
+        {
+          "text": "Rin"
+        }
+      ]
+    },
+    {
+      "questionText": "Care este capitala Madagascarului?",
+      "options": [
+        {
+          "text": "Harare"
+        },
+        {
+          "text": "Maputo"
+        },
+        {
+          "text": "Gaborone"
+        },
+        {
+          "text": "Antananarivo",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "questionText": "Ce tara din America de Sud are cea mai mare suprafata?",
+      "options": [
+        {
+          "text": "Argentina"
+        },
+        {
+          "text": "Brazilia",
+          "correct": true
+        },
+        {
+          "text": "Columbia"
+        },
+        {
+          "text": "Bolivia"
+        }
+      ]
+    },
+    {
+      "questionText": "Cine a scris romanul “Enigma Otilei”?",
+      "options": [
+        {
+          "text": "Liviu Rebreanu"
+        },
+        {
+          "text": "Honoré de Balzac"
+        },
+        {
+          "text": "George Călinescu",
+          "correct": true
+        },
+        {
+          "text": "Mihai Eminescu"
+        }
+      ]
+    },
+    {
+      "questionText": "Cate laturi are un hexagon??",
+      "options": [
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "8"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "4"
+        }
+      ]
+    },
+    {
+      "questionText": "Cine a inventat stiloul?",
+      "options": [
+        {
+          "text": "Traian Vuia"
+        },
+        {
+          "text": "Anastase Dragomir"
+        },
+        {
+          "text": "Ana Aslan"
+        },
+        {
+          "text": "Petrache Poenaru",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "questionText": "Care este cea mai populata tara?",
+      "options": [
+        {
+          "text": "Rusia"
+        },
+        {
+          "text": "China",
+          "correct": true
+        },
+        {
+          "text": "America"
+        },
+        {
+          "text": "Coreea de Sud"
+        }
+      ]
+    },
+    {
+      "questionText": "Cine a pictat celebrul tablou “Cina cea de taina ”?",
+      "options": [
+        {
+          "text": "Leonardo Da Vinci",
+          "correct": true
+        },
+        {
+          "text": "Michelangelo Buonarroti"
+        },
+        {
+          "text": "Vincent van Gogh"
+        },
+        {
+          "text": "Rembrandt van Rijn"
+        }
+      ]
+    },
+    {
+      "questionText": "In ce galaxie se afla Pamantul?",
+      "options": [
+        {
+          "text": "Calea Lactee",
+          "correct": true
+        },
+        {
+          "text": "Andromeda"
+        },
+        {
+          "text": "Medusa"
+        },
+        {
+          "text": "Malin 1"
+        }
+      ]
+    },
+    {
+      "questionText": "Care este cea mai dura substanta naturala?",
+      "options": [
+        {
+          "text": "Aur"
+        },
+        {
+          "text": "Fier"
+        },
+        {
+          "text": "Diamant",
+          "correct": true
+        },
+        {
+          "text": "Otel"
+        }
+      ]
+    }
+
+  ]
+}

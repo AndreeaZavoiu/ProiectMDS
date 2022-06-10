@@ -1,0 +1,8 @@
+<h1>Players</h1>
+<div class = "players">
+    <ul>
+        <li *ngFor="let player of players">
+            <h2 (click)="playerClicked(player)">{{player.title}}</h2>
+        </li>
+    </ul>
+</div>
