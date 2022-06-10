@@ -1,0 +1,25 @@
+<app-header></app-header>
+<body>
+  <br />
+  <div class="container">
+    <h1 class="display-5 fw-bold text-center">
+      Bine ati venit la testul de cultura generala!
+    </h1>
+    <p class="col-md-8 fs-4">Testul va contine un total de 10 intrebari.</p>
+    <h3>
+      Reguli:
+      <ol>
+        <li>Fiecare intrebare la care ati raspuns corect valoreaza 10 puncte.</li>
+        <li>Fiecare intrebare la care ati raspuns gresit va scadea 10 puncte din total.</li>
+        <li>Timpul de raspuns pentru o intrebare este de 60 de secunde.</li>
+
+      </ol>
+    </h3>
+    <h1 style="font-family: cursive; text-align: center">Mult succes!</h1>
+    <div class="name col-md-8 my-3">
+      <label for="">Introduceti numele dumneavoastra:</label>
+      <input #name type="text" class="form-control">
+    </div>
+    <button class="btn btn-success btn-lg" routerLink="/question" (click)="startQuiz()">Start</button>
+  </div>
+</body>
