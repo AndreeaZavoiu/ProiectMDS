@@ -1,10 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
+*{
+  /* margin: 0;
+  padding: 0; */
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.container-ibr{
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imgs/landscape.jpg);
@@ -17,7 +17,7 @@
   font-size: 17px;
 }
 
-ol > li {
+ol > li{
   margin-top: 35px;
   margin-left: 50px;
   font-weight: 500;
@@ -44,26 +44,26 @@ h1 {
   display: flex;
 }
 
-  .footer-container div {
-    margin-left: 120px;
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: left;
-  }
+.footer-container div {
+  /* margin-left: 120px; */
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+}
 
 
-  .footer-container li {
-    list-style-type: none;
-  }
+.footer-container li {
+  list-style-type: none;
+}
 
-  .footer-container div h5, address strong {
-    padding: 0;
-    font-size: 15px;
-    font-weight: bold;
-    color: #bcbcbc;
-  }
+.footer-container div h5, address strong {
+  padding: 0;
+  font-size:15px;
+  font-weight: bold;
+  color: #bcbcbc;
+}
 
-  .footer-container a {
-    text-decoration: none;
-    color: #5A5A5A;
-  }
+.footer-container a {
+  text-decoration: none;
+  color: #5A5A5A;
+}

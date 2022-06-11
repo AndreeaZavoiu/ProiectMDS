@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  baseurl = "http://localhost:61848"; // url-ul bazei de date din backend
+  baseurl = "http://localhost:8000"; // url-ul bazei de date din backend
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   
   constructor(private http: HttpClient) { }
@@ -33,4 +33,6 @@ export class ApiService {
   getQuestionJson() {
     return this.http.get<any>("assets/questions.json");
   }
+
+  addToCart(){}
 }

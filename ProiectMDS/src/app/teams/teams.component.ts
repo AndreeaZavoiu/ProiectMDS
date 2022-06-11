@@ -36,6 +36,7 @@ export class TeamsComponent implements OnInit {
       },
       error => {
         console.log(error); // TODO: alert box -> https://jasonwatmore.com/post/2019/07/05/angular-8-alert-toaster-notifications
+        // alert(`There are no players!`);
       }
     )
   }

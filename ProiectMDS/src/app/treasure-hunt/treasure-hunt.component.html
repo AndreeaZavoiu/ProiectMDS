@@ -1,1 +1,76 @@
-<p>treasure-hunt works!</p>
+<h1> Treasure Hunt </h1>
+
+
+
+<div class="flex-container">
+    <div class="row">
+        <div class="col1">
+            <h2>Battle 1</h2>
+            <p>O persoană din prima echipa trebuie să mimeze un coechipier, timp de maxim 30 de secunde. După acest timp, membrii echipei
+            adverse vor încerca să ghicească persoana mimată. Se repetă jocul pentru cealaltă echipă după aceleași reguli. Cine ghicește corect
+            din prima, câștigă. Dacă e remiză, se reia, până când cineva greșește.
+            </p><br><br>
+            
+            <h2>Battle 2</h2>
+            <p>Fiecare echipă își alege un semnal sonor (de exemplu: la, ma). După ce ambele echipe și-au stabilit semnalul și membrii s-au
+                așezat în linie, se dă startul. Primii concurenti din fiecare echipă vor începe concomitent să strige semnalul până rămân 
+                fără aer. În momentul în care o persoana nu mai are aer, va ridica mâna, iar următorul coechipier poate începe la rândul lui
+                să strige semnalul până rămâne și el fără aer și tot așa. Va pierde echipa care rămâne fără concurenți care sa strige 
+                semnalul. Dacă echipele nu au număr egal de voluntari, atunci unul din echipa cu mai mulți va sta pe bara.</p><br><br>
+            
+            <h2>Battle 3</h2>
+            <p>Fiecare echipă se așează în linie. Doi membri consecutivi țin câte o foaie între palme. Echipele trebuie să se deplaseze 
+                aproximativ 30m fără să scape foile. Dacă una dintre foi cade, echipa trebuie să o ia de la capăt. Câștigă cea care
+                parcurge prima tot traseul până la capăt.</p>
+        </div>
+
+        <div class="col2">
+            <div class="wheel">
+                <ngx-wheel #wheel width='400' height='400' spinDuration='5' [disableSpinOnClick]='true' [items]='players'
+                    [innerRadius]='40' [spinAmount]='5' pointerStrokeColor='red' pointerFillColor='purple' [idToLandOn]='idToLandOn'
+                    (onSpinStart)='before()' (onSpinComplete)='after()'
+                    >
+                </ngx-wheel>
+            </div>
+        </div>
+        <div class="butoane">
+            <button (click)="wheel.spin()">Spin</button>
+            <button (click)="wheel.reset()">Reset</button>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col1">
+            <h2>Battle 2</h2>
+            <p>Fiecare echipă își alege un semnal sonor (de ex: la-, ma-…). După ce ambele echipe și-au stabilit semnalul, se dă startul. 
+                Primul concurent din fiecare echipă va începe să strige semnalul până rămâne fără aer. În momentul în care nu mai are aer, 
+                va ridica mâna, iar următorul coechipier poate începe la rândul lui să strige semnalul până rămâne și el fără aer și tot așa. 
+                Va pierde echipa care rămâne fără concurenți care sa strige semnalul. Dacă echipele nu au număr egal de voluntari, atunci unul 
+                din echipa cu mai mulți, va sta pe bara.</p>
+        </div>
+        <div class="col2">
+            <div class="wheel">
+                <ngx-wheel #wheel
+                    width='500'
+                    height='500'
+                    spinDuration='5'
+                    [disableSpinOnClick]='true'
+                    [items]='players'
+                    [innerRadius]='50'
+                    [spinAmount]='5'
+                    pointerStrokeColor='red'
+                    pointerFillColor='purple'
+                    [idToLandOn]='idToLandOn'
+                    (onSpinStart)='before()'
+                    (onSpinComplete)='after()'
+                    >
+                </ngx-wheel>
+            </div>
+            <div class="buttons">
+                <button (click)="wheel.spin()">Spin</button>
+                <button (click)="wheel.reset()">Reset</button>
+            </div>
+        </div>
+    </div> -->
+    
+</div>
