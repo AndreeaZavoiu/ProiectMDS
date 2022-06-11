@@ -22,6 +22,9 @@ import { QuizComponent } from './quiz/quiz.component';
 import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
 import { QuestionComponent } from './question/question.component';
 import { HeaderComponent } from './header/header.component';
+import { ChangeBgDirective } from './change-bg.directive';
+import { NgxWheelModule } from 'ngx-wheel';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { HeaderComponent } from './header/header.component';
     QuizComponent,
     TreasureHuntComponent,
     QuestionComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChangeBgDirective,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { HeaderComponent } from './header/header.component';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
+    NgxWheelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

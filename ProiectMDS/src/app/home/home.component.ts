@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -11,57 +12,17 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit {
   
-  title = 'angulartoastr';
-  showModal: boolean;
-  registerForm: FormGroup;
-  submitted = false;
-  constructor(private formBuilder: FormBuilder) { 
-  }
-  show()
-  {
-    this.showModal = true; // Show-Hide Modal Check
-    
-  }
-  //Bootstrap Modal Close event
-  hide()
-  {
-    this.showModal = false;
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
-  ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]]
-    });
-}
-// convenience getter for easy access to form fields
-get f() { return this.registerForm.controls; }
-onSubmit() {
-    this.submitted = true;
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-        return;
-    }
-    if(this.submitted)
-    {
-      this.showModal = false;
-    } 
+  constructor(//private apiService: ApiService
+  ){
+
   }
-
-//   constructor(private dialog: MatDialog) {}
-
-//   openDialog() {
-
-//       const dialogConfig = new MatDialogConfig();
-
-//       dialogConfig.disableClose = true;
-//       dialogConfig.autoFocus = true;
-//       this.dialog.open(HomeComponent, dialogConfig);
-//   }
   
-//   ngOnInit(): void {
-    
-  
-//   }
-  
+  pret: number;
+  addToCart(pret: number){
+
+  }
 }

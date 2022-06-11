@@ -12,6 +12,7 @@ export class QuizComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   startQuiz() {
     localStorage.setItem("name", this.nameKey.nativeElement.value);
   }

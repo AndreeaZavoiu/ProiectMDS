@@ -6,6 +6,7 @@ import { QuestionComponent } from './question/question.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { RegisterPlayerComponent } from './register-player/register-player.component';
 import { RegisterComponent } from './register/register.component';
+import { RulesComponent } from './rules/rules.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path : 'ice-breakers', component: IceBreakersComponent},
   { path : 'treasure-hunt', component: TreasureHuntComponent},
   { path : 'quiz', component: QuizComponent},
-  { path: 'question', component: QuestionComponent }
+  { path: 'question', component: QuestionComponent },
+  { path: 'rules', component: RulesComponent }
 ];
 
 @NgModule({
