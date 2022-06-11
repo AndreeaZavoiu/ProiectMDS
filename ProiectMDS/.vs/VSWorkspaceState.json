@@ -4,9 +4,11 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\home",
-    "\\src\\app\\question",
+    "\\src\\app\\quiz",
+    "\\src\\app\\register",
+    "\\src\\app\\register-player",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\question\\question.component.html",
+  "SelectedNode": "\\src\\app\\register\\register.component.html",
   "PreviewInSolutionExplorer": false
 }

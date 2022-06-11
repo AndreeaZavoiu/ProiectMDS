@@ -44,12 +44,14 @@ h1 {
   display: flex;
 }
 
-.footer-container div {
-  /* margin-left: 120px; */
-  padding-left: 25px;
-  padding-right: 25px;
-  text-align: left;
-}
+  .footer-container div {
+    /* margin-left: 120px; */
+    position: relative;
+    margin-top: 15%;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
 
 
 .footer-container li {
@@ -57,7 +59,6 @@ h1 {
 }
 
 .footer-container div h5, address strong {
-  padding: 0;
   font-size:15px;
   font-weight: bold;
   color: #bcbcbc;

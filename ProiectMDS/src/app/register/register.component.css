@@ -1,6 +1,41 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2019/03/03/20/23/flowers-4032775_1280.png");
+  background-color: mediumseagreen;
+}
 
-.registerCompany{
-    margin-top: 70px;
+.container1 {
+  align-content: center;
+  margin: auto;
+  width: 40%;
+  border: 3px solid aquamarine;
+  padding: 100px;
+  background: rgb(152, 205, 187);
+}
+
+.inp {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.b {
+  background-color: cadetblue;
+  border: 3px solid aquamarine;
+  color: rgb(26, 62, 93);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 44%;
 }
 
 input{
@@ -20,7 +55,7 @@ footer {
     background-color: #191919;
     color: #ADADAD;
     margin-bottom: 0;
-    margin-top: 35rem;
+    margin-top: auto;
 }
   
 footer address {
@@ -160,4 +195,3 @@ footer address strong {
   .list-unstyled li a {
     text-decoration:none;
   }
-  
