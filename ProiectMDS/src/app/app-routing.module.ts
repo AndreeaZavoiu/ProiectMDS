@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RulesComponent } from './rules/rules.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path : 'treasure-hunt', component: TreasureHuntComponent},
   { path : 'quiz', component: QuizComponent},
   { path: 'question', component: QuestionComponent },
-  { path: 'rules', component: RulesComponent }
+  { path: 'rules', component: RulesComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

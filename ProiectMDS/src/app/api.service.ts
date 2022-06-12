@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   baseurl = "http://localhost:8000"; // url-ul bazei de date din backend
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
@@ -34,5 +35,5 @@ export class ApiService {
     return this.http.get<any>("assets/questions.json");
   }
 
-  addToCart(){}
+  addToCart() { }
 }

@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 import { ChangeBgDirective } from './change-bg.directive';
 import { NgxWheelModule } from 'ngx-wheel';
 import { RulesComponent } from './rules/rules.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RulesComponent } from './rules/rules.component';
     QuestionComponent,
     HeaderComponent,
     ChangeBgDirective,
-    RulesComponent
+    RulesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
