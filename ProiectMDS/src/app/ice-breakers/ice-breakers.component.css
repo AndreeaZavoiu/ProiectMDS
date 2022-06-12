@@ -1,10 +1,10 @@
-*{
+* {
   /* margin: 0;
   padding: 0; */
   font-family: 'Roboto', sans-serif;
 }
 
-.container-ibr{
+.container-ibr {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imgs/landscape.jpg);
@@ -13,11 +13,12 @@
   color: white;
   padding-left: 9%;
   padding-right: 11%;
+  /* padding-bottom: 150px; */
   box-sizing: border-box;
-  font-size: 17px;
+  font-size: 16px;
 }
 
-ol > li{
+ol > li {
   margin-top: 35px;
   margin-left: 50px;
   font-weight: 500;
@@ -29,14 +30,12 @@ h1 {
   text-align: center;
   font-size: 2rem;
   padding-top: 2.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
-
-
 
 .footer-container {
   padding-top: 35px;
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
   margin: 0;
   background-color: black;
   color: #5A5A5A;
@@ -46,25 +45,52 @@ h1 {
 
   .footer-container div {
     /* margin-left: 120px; */
-    position: relative;
-    margin-top: 15%;
     padding-left: 25px;
     padding-right: 25px;
     text-align: left;
   }
 
+  .footer-container li {
+    list-style-type: none;
+  }
 
-.footer-container li {
-  list-style-type: none;
+  .footer-container div h5, address strong {
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #bcbcbc;
+  }
+
+  .footer-container a {
+    text-decoration: none;
+    color: #5A5A5A;
+  }
+
+
+@media screen and (max-width: 1430px) {
+  .container-ibr {
+    font-size: 15px;
+    /* padding-bottom: 300px; */
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-container {
+    padding-top: 15px;
+    font-size: 0.8rem;
+  }
+
+    .footer-container div h5, address strong {
+      font-size: 0.9rem;
+    }
 }
 
-.footer-container div h5, address strong {
-  font-size:15px;
-  font-weight: bold;
-  color: #bcbcbc;
-}
-
-.footer-container a {
-  text-decoration: none;
-  color: #5A5A5A;
+@media screen and (max-width: 1020px) {
+  .ultimul {
+    display: none;
+    visibility: hidden;
+  }
 }
