@@ -10,7 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { RulesComponent } from './rules/rules.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
-import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
