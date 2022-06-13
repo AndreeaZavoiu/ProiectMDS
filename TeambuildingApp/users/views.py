@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from django.contrib.auth.views import LoginView
-from TeambuildingApp.users.serializers import GroupSerializer, UserSerializer
+from TeambuildingApp.users.serializers import *
+from TeambuildingApp.users.models import *
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -13,8 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     #permission_classes = [permissions.IsAuthenticated]
 
-class LoginInterfaceView(LoginView):
-    pass
+
 class GroupViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
@@ -22,3 +21,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+
