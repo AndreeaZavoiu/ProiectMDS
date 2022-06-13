@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllPlayers(): Observable<any> {
-    return this.http.get(this.baseurl + '/teams/', 
+    return this.http.get("http://localhost:8000/api/v1/teams/", 
               {headers: this.httpHeaders});
   }
 
@@ -23,7 +23,7 @@ export class ApiService {
   }
 
   registerCompany(companyData): Observable<any> {
-      return this.http.post(this.baseurl + '/companies/', companyData);
+      return this.http.post("http://localhost:8000/user/users", companyData);
   }
 
   registerPlayer(playerData): Observable<any> {
@@ -35,4 +35,16 @@ export class ApiService {
   }
 
   addToCart(){}
+
+  login(email:string, password:string ) {
+    return this.http.post("http://localhost:8000", {email, password});
+        // this is just the HTTP call, 
+        // we still need to handle the reception of the token
+       // .pipe(shareReplay(1));
+  }
+
+  createTeam(name): Observable<any> {
+    return this.http.post("http://localhost:8000/api/v1/teams/", name);
+  }
+
 }

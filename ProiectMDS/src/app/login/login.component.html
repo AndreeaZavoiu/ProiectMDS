@@ -1,3 +1,64 @@
-<p>login test!</p>
-<div>hello</div>
+<body> <br><br>
+<div class="container1">
+<form [formGroup]="form">
+    <fieldset>
+        <legend>Login</legend>
+        <div class="form-field">
+            <label>Email:</label>
+            <input name="email" formControlName="email">
+        </div>
 
+        <div class="form-field">
+            <label>Password:</label>
+            <input name="password" formControlName="password" type="password">
+        </div>
+    </fieldset>
+
+    <div class="form-buttons">
+        <button class="button button-primary"
+                (click)="login()">Login</button>
+    </div>
+
+</form>
+</div>
+</body>
+
+<footer>
+    <div class="container">
+      
+      <div class="col-sm-2">
+        <h5>The company</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Packt publisher</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <h5>Social</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <h5>Support</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy police</a></li>
+          <li><a href="#">Terms & conditions</a></li>
+          <li><a href="#">Help desk</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <address>
+          <strong>Name, Inc.</strong>
+          Address line 1<br>
+          Address line 2<br>
+          <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+      </div>
+    </div>
+  </footer>
