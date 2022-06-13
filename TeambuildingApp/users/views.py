@@ -5,6 +5,8 @@ from django.contrib.auth.views import LoginView
 from TeambuildingApp.users.serializers import GroupSerializer, UserSerializer
 from rest_framework.permissions import IsAuthenticated
 from .serializers import UserSerializer
+from TeambuildingApp.users.serializers import *
+from TeambuildingApp.users.models import *
 
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.response import Response
@@ -38,3 +40,14 @@ class CustomAuthToken(ObtainAuthToken):
             'user_id': user.pk,
             'email': user.email
         })
+
+class GroupViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+

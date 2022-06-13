@@ -1,5 +1,7 @@
 body {
-  background-image: url("https://cdn.pixabay.com/photo/2019/03/03/20/23/flowers-4032775_1280.png");
+  /* background-image: url("https://cdn.pixabay.com/photo/2019/03/03/20/23/flowers-4032775_1280.png"); */
+  background-image: url(../imgs/exploreTheWorld.jpg);
+  background-size: cover;
   background-color: mediumseagreen;
 }
 
@@ -7,9 +9,11 @@ body {
   align-content: center;
   margin: auto;
   width: 40%;
-  border: 3px solid aquamarine;
-  padding: 100px;
+  border: 1px solid aquamarine;
+  border-radius: 20px;
+  padding: 55px;
   background: rgb(152, 205, 187);
+  margin-top: 25px;
 }
 
 .inp {
@@ -24,7 +28,8 @@ body {
 
 .b {
   background-color: cadetblue;
-  border: 3px solid aquamarine;
+  border: 2px solid aquamarine;
+  border-radius: 10px;
   color: rgb(26, 62, 93);
   padding: 10px;
   text-align: center;
@@ -34,8 +39,12 @@ body {
   margin: 4px 2px;
   cursor: pointer;
   position: absolute;
-  top: 65%;
-  left: 44%;
+  top: 55%;
+  left: 45%;
+}
+
+.b:hover{
+  background-color: rgb(123, 200, 203);
 }
 
 input{
