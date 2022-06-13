@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from TeambuildingApp.users import views
+import TeambuildingApp.users.views
+import TeambuildingApp.users.api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/', include('TeambuildingApp.users.urls')),
-    
+    path('user/', include('TeambuildingApp.users.urls')),
+
+    path('api/v1/teams/', TeambuildingApp.users.api_views.TeamList.as_view()),
+    path('api/v1/teams/new', TeambuildingApp.users.api_views.TeamCreate.as_view()),
+    path('api/v1/teams/<int:id>', TeambuildingApp.users.api_views.TeamRetrieveUpdateDestroy.as_view()),
     
 ]
