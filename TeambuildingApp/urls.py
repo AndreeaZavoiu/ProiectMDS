@@ -21,6 +21,7 @@ import TeambuildingApp.users.api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('api/auth/', include('rest_framework.urls')),
     path('user/', include('TeambuildingApp.users.urls')),
 
     path('api/v1/teams/', TeambuildingApp.users.api_views.TeamList.as_view()),

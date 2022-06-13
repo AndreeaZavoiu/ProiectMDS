@@ -9,7 +9,9 @@ import { ApiService } from '../api.service';
 })
 
 export class TeamsComponent implements OnInit {
-  players = [{title: 'test'}];
+  players = [{title: 'testNumePlayer'}];
+  teams = [{name: 'testNumeEchipa'}];
+  name = "";
 
   constructor(private api: ApiService) { 
     this.getPlayers();
@@ -39,5 +41,9 @@ export class TeamsComponent implements OnInit {
         // alert(`There are no players!`);
       }
     )
+  }
+
+  createTeam = (name) => {
+    this.api.createTeam(name).subscribe();
   }
 }

@@ -52,5 +52,9 @@ export class ApiService {
     localStorage.setItem('id_token', authResult.access); //ce reiese din Postam - access si refresh
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
     
-}
+  }
+  
+  createTeam(name): Observable<any> {
+    return this.http.post("http://localhost:8000/api/v1/teams/", name);
+  }
 }

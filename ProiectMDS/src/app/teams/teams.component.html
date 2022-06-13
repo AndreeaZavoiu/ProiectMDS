@@ -1,8 +1,24 @@
 <h1>Players</h1>
+
 <div class = "players">
     <ul>
         <li *ngFor="let player of players">
             <h2 (click)="playerClicked(player)">{{player.title}}</h2>
+        </li>
+    </ul>
+</div>
+
+<div class="main">
+    <div class="input-fields">
+      <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
+    </div>
+    <button (click)="createTeam(name)">Add Team </button>
+  </div>
+
+<div class = "teams">
+    <ul>
+        <li *ngFor="let team of teams">
+            <h2 (click)="teamClicked(team)">{{team.name}}</h2>
         </li>
     </ul>
 </div>
