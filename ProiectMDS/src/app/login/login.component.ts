@@ -6,15 +6,12 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [ApiService]
 })
-
-export class LoginComponent implements OnInit {
-
-  ngOnInit(): void {
-  }
-
-  form:FormGroup;
+  export class LoginComponent implements OnInit{
+    
+    form:FormGroup;
 
     constructor(private fb:FormBuilder, 
                  private authService: ApiService, 
@@ -25,6 +22,9 @@ export class LoginComponent implements OnInit {
             password: ['',Validators.required]
         });
     }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
     login() {
         const val = this.form.value;
@@ -32,9 +32,15 @@ export class LoginComponent implements OnInit {
         if (val.email && val.password) {
             this.authService.login(val.email, val.password)
                 .subscribe(
-                    () => {
+                    (res) => {
+                        console.log(res);
                         console.log("User is logged in");
                         this.router.navigateByUrl('/');
+                    },
+                    (err) =>  {
+                      console.log("Ups! That's embarassing");
+                      alert("Ups!");
+                      console.log(err);
                     }
                 );
         }

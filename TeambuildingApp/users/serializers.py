@@ -1,5 +1,4 @@
 from django.contrib.auth.models import User, Group
-from html5lib import serialize
 from rest_framework import serializers
 
 from TeambuildingApp.users.models import Team, Profile

@@ -2,6 +2,7 @@ import { NgModule, Query } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { IceBreakersComponent } from './ice-breakers/ice-breakers.component';
+import { LoginComponent } from './login/login.component';
 import { QuestionComponent } from './question/question.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { RegisterPlayerComponent } from './register-player/register-player.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path : 'treasure-hunt', component: TreasureHuntComponent},
   { path : 'quiz', component: QuizComponent},
   { path: 'question', component: QuestionComponent },
-  { path: 'rules', component: RulesComponent }
+  { path: 'rules', component: RulesComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

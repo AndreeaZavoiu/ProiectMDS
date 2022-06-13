@@ -18,7 +18,7 @@ class Team(models.Model):
 class Profile(models.Model):
     name = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
+    #password = models.CharField(max_length=30)
     company_name = models.CharField(max_length=20)
 
     class Meta:
