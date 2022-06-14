@@ -2,7 +2,7 @@ body {
   /* background-image: url("https://cdn.pixabay.com/photo/2019/03/03/20/23/flowers-4032775_1280.png"); */
   background-image: url(../imgs/exploreTheWorld.jpg);
   background-size: cover;
-  height: 100%;
+  height: 100vh;
 }
 
 .container1 {
