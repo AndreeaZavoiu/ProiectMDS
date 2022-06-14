@@ -1,12 +1,29 @@
+.float-container {
+    height: 100vh;
+    padding: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(src\app\imgs\teams.jpg);
+    background-size: cover;
+    color: white;
+}
+
 .players{
     margin-top: 30px;
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.echipe{
+    width: 50%;
+    float: left;
+    padding: 20px;
 }
 
 .main {
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
 }
 
@@ -25,3 +42,61 @@ button{
     margin: 10px;
     cursor: pointer;
 }
+
+
+
+.footer-container {
+    padding-top: 35px;
+    /* padding-bottom: 25px; */
+    margin: 0;
+    background-color: black;
+    color: #5A5A5A;
+    text-align: center;
+    display: flex;
+  }
+  
+    .footer-container div {
+      /* margin-left: 120px; */
+      padding-left: 25px;
+      padding-right: 25px;
+      text-align: left;
+    }
+  
+    .footer-container li {
+      list-style-type: none;
+    }
+  
+    .footer-container div h5, address strong {
+      padding: 0;
+      font-size: 15px;
+      font-weight: bold;
+      color: #bcbcbc;
+    }
+  
+    .footer-container a {
+      text-decoration: none;
+      color: #5A5A5A;
+    }
+  
+  
+  @media screen and (max-width: 1430px) {
+    .container-ibr {
+      font-size: 15px;
+      /* padding-bottom: 300px; */
+    }
+  
+    h1 {
+      font-size: 1.7rem;
+      padding-bottom: 1rem;
+    }
+  
+    .footer-container {
+      padding-top: 15px;
+      font-size: 0.8rem;
+    }
+  
+      .footer-container div h5, address strong {
+        font-size: 0.9rem;
+      }
+  }
+  

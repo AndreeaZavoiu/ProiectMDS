@@ -1,12 +1,74 @@
+
 .container {
   margin: auto;
   width: 50%;
-  border: 3px solid aquamarine;
-  padding: 10px;
+  border: 1px solid aquamarine;
+  border-radius: 10px;;
+  padding: 30px;
   background: rgb(152, 205, 187);
+  margin-top: 30px;
 }
 
 body {
-  background-image: url("https://cdn.pixabay.com/photo/2020/07/08/11/07/imagination-5383470_1280.jpg");
+  /* background-image: url("https://cdn.pixabay.com/photo/2020/07/08/11/07/imagination-5383470_1280.jpg"); */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),  url(src\app\imgs\ceasuri.jpg);
+  background-size: cover;
   background-color: forestgreen;
+  height: 100vh;
+}
+
+
+
+.footer-container {
+  padding-top: 35px;
+  /* padding-bottom: 25px; */
+  margin: 0;
+  background-color: black;
+  color: #5A5A5A;
+  text-align: center;
+  display: flex;
+}
+
+  .footer-container div {
+    /* margin-left: 120px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
+
+  .footer-container li {
+    list-style-type: none;
+  }
+
+  .footer-container div h5, address strong {
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #bcbcbc;
+  }
+
+  .footer-container a {
+    text-decoration: none;
+    color: #5A5A5A;
+  }
+
+
+@media screen and (max-width: 1430px) {
+  .container-ibr {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-container {
+    padding-top: 15px;
+    font-size: 0.8rem;
+  }
+
+    .footer-container div h5, address strong {
+      font-size: 0.9rem;
+    }
 }
