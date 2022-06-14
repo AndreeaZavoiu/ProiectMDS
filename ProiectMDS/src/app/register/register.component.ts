@@ -17,13 +17,16 @@ export class RegisterComponent implements OnInit {
     this.register = {
         username : '',
         password : '',
-        email : ''
+        email : '',
+        // is_staff : 'True'
     }
   }
 
   registerCompany() {
-    this.companyService.registerCompany(this.register).subscribe( //registerCompany returneaza un observable => de aceea trb subscribe
-      response => {
+    console.log('altceva')
+    this.companyService.registerCompany(this.register).subscribe( //registerCompany returneaza un observable => de aceea trb subscribe 
+    response => {
+          //this.companyService.setSession(res);
           alert('Company ' + this.register.username + ' has been registered!');
       }, error => console.log('error', error)
     )

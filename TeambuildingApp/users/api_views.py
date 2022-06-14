@@ -2,11 +2,14 @@ from rest_framework.generics import *
 from django.contrib.auth.views import LoginView
 from TeambuildingApp.users.serializers import *
 from TeambuildingApp.users.models import *
+from rest_framework.permissions import IsAuthenticated
 from TeambuildingApp.users.models import Team
+
 
 class TeamList(ListAPIView):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
+    permission_classes = [IsAuthenticated]
 
 class TeamCreate(CreateAPIView):
     serializer_class = TeamSerializer

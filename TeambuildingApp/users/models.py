@@ -24,3 +24,4 @@ class Profile(models.Model):
     class Meta:
         app_label = 'users'
 
+

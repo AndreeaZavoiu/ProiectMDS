@@ -18,7 +18,8 @@ export class RegisterPlayerComponent implements OnInit {
     this.register = {
         username : '',
         password : '',
-        email : ''
+        email : '',
+        // is_staff : 'False'
     }
   }
 
