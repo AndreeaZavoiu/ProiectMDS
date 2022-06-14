@@ -46,13 +46,35 @@ export class ApiService {
             .pipe(shareReplay());
   }
 
-  private setSession(authResult) {
-    const expiresAt = moment().add(authResult.expiresIn,'second');
+   setSession(authResult) {
+    const expiresAt = moment().add(3600,'second');
 
     localStorage.setItem('id_token', authResult.access); //ce reiese din Postam - access si refresh
-    localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
-    
+    console.log("Token-ul de autentificare este");
+    console.log(authResult.access);
+    localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
+    console.log("Expira la:");
+    console.log(expiresAt.valueOf());
   }
+
+  logout() { //trebuie pus pe butonul de logout
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
+}
+
+public isLoggedIn() {
+  return moment().isBefore(this.getExpiration());
+}
+
+isLoggedOut() {
+  return !this.isLoggedIn();
+}
+
+getExpiration() {
+  const expiration = localStorage.getItem("expires_at");
+  const expiresAt = JSON.parse(expiration);
+  return moment(expiresAt);
+}
   
   createTeam(name): Observable<any> {
     return this.http.post("http://localhost:8000/api/v1/teams/", name);

@@ -22,6 +22,8 @@ import { ApiService } from '../api.service';
             password: ['',Validators.required]
         });
     }
+
+    public user: any;
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -35,6 +37,7 @@ import { ApiService } from '../api.service';
                     (res) => {
                         console.log(res);
                         console.log("User is logged in");
+                        this.authService.setSession(res);
                         this.router.navigateByUrl('/');
                     },
                     (err) =>  {
@@ -45,4 +48,6 @@ import { ApiService } from '../api.service';
                 );
         }
     }
+    
+   
 }
