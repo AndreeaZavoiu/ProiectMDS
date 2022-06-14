@@ -18,12 +18,20 @@ from django.urls import path, include
 
 import TeambuildingApp.users.views
 import TeambuildingApp.users.api_views
+from TeambuildingApp.users.views import (
+        RegisterAPI,
+        LoginAPI
+)
+from knox import views as knox_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/auth/', include('rest_framework.urls')),
     path('user/', include('TeambuildingApp.users.urls')),
-
+    path('api/auth/', include('knox.urls')),
+    path('api/auth/register', RegisterAPI.as_view()),
+    path('api/auth/login', LoginAPI.as_view()),
+    path('api/auth/logout', knox_views.LogoutView.as_view(), name='knox_logout'),
     path('api/v1/teams/', TeambuildingApp.users.api_views.TeamList.as_view()),
     path('api/v1/teams/new', TeambuildingApp.users.api_views.TeamCreate.as_view()),
     path('api/v1/teams/<int:id>', TeambuildingApp.users.api_views.TeamRetrieveUpdateDestroy.as_view()),

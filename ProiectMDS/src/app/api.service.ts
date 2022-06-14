@@ -10,6 +10,7 @@ import * as moment from "moment";
 export class ApiService {
 
 
+  isUserLoggedIn: boolean = false;
   baseurl = "http://localhost:8000"; // url-ul bazei de date din backend
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   
@@ -26,11 +27,11 @@ export class ApiService {
   }
 
   registerCompany(companyData): Observable<any> {
-      return this.http.post("http://localhost:8000/user/users", companyData);
+      return this.http.post("http://localhost:8000/api/auth/register", companyData);
   }
 
   registerPlayer(playerData): Observable<any> {
-    return this.http.post(this.baseurl + '/players/', playerData);
+    return this.http.post("http://localhost:8000/api/auth/register", playerData);
   }
 
   getQuestionJson() {
@@ -40,42 +41,43 @@ export class ApiService {
   addToCart(){}
 
   login(email: any, password: any) {
-    return this.http.post("http://localhost:8000/user/api/token/", {"username": email, password})
-            // this is just the HTTP call, 
-            // we still need to handle the reception of the token
+    
+    this.isUserLoggedIn = true;
+    return this.http.post("http://localhost:8000/api/auth/login", {"username": email, password})
             .pipe(shareReplay());
   }
 
    setSession(authResult) {
-    const expiresAt = moment().add(3600,'second');
+    //const expiresAt = moment().add(3600,'second');
+    localStorage.setItem('token', authResult.token); //ce reiese din Postam - access si refresh
+    console.log(authResult.token);
+    //localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
+  }
 
-    localStorage.setItem('id_token', authResult.access); //ce reiese din Postam - access si refresh
-    console.log("Token-ul de autentificare este");
-    console.log(authResult.access);
-    localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
-    console.log("Expira la:");
-    console.log(expiresAt.valueOf());
+  createAuthorizationHeader() {
+    const token = localStorage.getItem("token");
+    const headers= new HttpHeaders()
+    .set('content-type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*')
+    .set('Authorization', `Token ${token}`);
+    return headers;
   }
 
   logout() { //trebuie pus pe butonul de logout
-    localStorage.removeItem("id_token");
-    localStorage.removeItem("expires_at");
+    const headers = this.createAuthorizationHeader();
+    localStorage.removeItem("token");
+    return this.http.post("http://localhost:8000/api/auth/logout", {}, {"headers": headers})
+            .pipe(shareReplay());
 }
 
 public isLoggedIn() {
-  return moment().isBefore(this.getExpiration());
+  return !!localStorage.getItem("token"); //e transf in boolean
 }
 
 isLoggedOut() {
   return !this.isLoggedIn();
 }
 
-getExpiration() {
-  const expiration = localStorage.getItem("expires_at");
-  const expiresAt = JSON.parse(expiration);
-  return moment(expiresAt);
-}
-  
   createTeam(name): Observable<any> {
     return this.http.post("http://localhost:8000/api/v1/teams/", name);
   }
