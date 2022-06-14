@@ -4,7 +4,6 @@ header {
   background-color: rgb(152, 205, 187);
   margin-top: 0;
   padding-top: 20px;
-  /* padding-bottom: 30px; */
 }
 
 footer,
@@ -75,7 +74,6 @@ a {
 ul,
 ol {
   margin-top: 0;
-  /* margin-bottom: 10px; */
 }
 
   ul ul,
@@ -150,7 +148,6 @@ ol {
 }
 
 
-/* footer */
 footer {
   bottom: 0;
   margin: 0;
@@ -159,7 +156,6 @@ footer {
   background-color: #191919;
   color: #ADADAD;
   position: relative;
-  /* display: block; */
   height: 100px;
   width: 100%;
 }
@@ -171,8 +167,6 @@ footer {
   }
 
   footer address {
-    /* margin-top: 5em;
-    margin-bottom: 5em; */
     color: #5A5A5A;
   }
 

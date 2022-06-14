@@ -1,24 +1,76 @@
+<app-header></app-header>
+
+<div class="float-container">
+<div class = "players">
 <h1>Players</h1>
 
-<div class = "players">
     <ul>
         <li *ngFor="let player of players">
             <h2 (click)="playerClicked(player)">{{player.title}}</h2>
         </li>
     </ul>
 </div>
+<br>
 
-<div class="main">
-    <div class="input-fields">
-      <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
+<div class="echipe">
+    <h1>Teams</h1>
+    <div class="main">
+        <h3>Creeaza echipe introducandu-le numele:</h3>
+        <div class="input-fields">
+        <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
+        </div>
+        <button (click)="createTeam(name)">Add Team </button>
     </div>
-    <button (click)="createTeam(name)">Add Team </button>
-  </div>
 
-<div class = "teams">
-    <ul>
-        <li *ngFor="let team of teams">
-            <h2 (click)="teamClicked(team)">{{team.name}}</h2>
-        </li>
-    </ul>
+    <div class = "teams">
+        <ul>
+            <li *ngFor="let team of teams">
+                <h2 (click)="teamClicked(team)">{{team.name}}</h2>
+            </li>
+        </ul>
+    </div>
 </div>
+
+</div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-2">
+        <h5>The company</h5>
+        <ul class="list-unstyled">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Packt publisher</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-2">
+        <h5>Social</h5>
+        <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-2">
+        <h5>Support</h5>
+        <ul class="list-unstyled">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy police</a></li>
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Help desk</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-4">
+        <address>
+            <strong>Name, Inc.</strong><br><br>
+            Address line 1<br>
+            Address line 2<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+        </div>
+    </div>
+</footer>

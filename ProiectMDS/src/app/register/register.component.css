@@ -2,17 +2,18 @@ body {
   /* background-image: url("https://cdn.pixabay.com/photo/2019/03/03/20/23/flowers-4032775_1280.png"); */
   background-image: url(../imgs/exploreTheWorld.jpg);
   background-size: cover;
-  background-color: mediumseagreen;
+  height: 100%;
 }
 
 .container1 {
   align-content: center;
   margin: auto;
   width: 40%;
-  border: 1px solid aquamarine;
+  /* border: 1px solid aquamarine; */
   border-radius: 20px;
   padding: 55px;
-  background: rgb(152, 205, 187);
+  /* background: rgb(169,169,169); */
+  background-color: rgb(192,192,192);
   margin-top: 25px;
 }
 
@@ -27,8 +28,8 @@ body {
 }
 
 .b {
-  background-color: cadetblue;
-  border: 2px solid aquamarine;
+  background-color: rgb(192,192,192);
+  border: 4px solid #ccc;
   border-radius: 10px;
   color: rgb(26, 62, 93);
   padding: 10px;
@@ -44,7 +45,7 @@ body {
 }
 
 .b:hover{
-  background-color: rgb(123, 200, 203);
+  background-color: rgb(169,169,169);
 }
 
 input{
@@ -66,16 +67,10 @@ footer {
     margin-bottom: 0;
     margin-top: auto;
 }
-  
-footer address {
-    margin-top: 3em;
-    margin-bottom: 2em; 
-    color: #5A5A5A;
-}
-  
-footer ul {
+ 
+/* footer ul {
     margin-bottom: 5em;
-}
+} */
   
 footer address strong {
     color: #ADADAD;
@@ -108,12 +103,7 @@ footer address strong {
       margin-top: 3rem;
   }
   
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
   
   .col-sm-2, .col-sm-4 {
     position: relative;
@@ -204,3 +194,62 @@ footer address strong {
   .list-unstyled li a {
     text-decoration:none;
   }
+
+
+  
+
+
+.footer-container {
+  padding-top: 35px;
+  /* padding-bottom: 25px; */
+  margin: 0;
+  background-color: black;
+  color: #5A5A5A;
+  text-align: center;
+  display: flex;
+}
+
+  .footer-container div {
+    /* margin-left: 120px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
+
+  .footer-container li {
+    list-style-type: none;
+  }
+
+  .footer-container div h5, address strong {
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #bcbcbc;
+  }
+
+  .footer-container a {
+    text-decoration: none;
+    color: #5A5A5A;
+  }
+
+
+@media screen and (max-width: 1430px) {
+  .container-ibr {
+    font-size: 15px;
+    /* padding-bottom: 300px; */
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-container {
+    padding-top: 15px;
+    font-size: 0.8rem;
+  }
+
+    .footer-container div h5, address strong {
+      font-size: 0.9rem;
+    }
+}
