@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     console.log('in here!')
     this.headerService.logout().subscribe( //registerCompany returneaza un observable => de aceea trb subscribe 
     response => {
-          alert('Log out!');
+          alert('Logged out!');
       }, error => console.log('error', error)
     )
   }

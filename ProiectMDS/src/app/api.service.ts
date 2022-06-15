@@ -78,7 +78,12 @@ isLoggedOut() {
   return !this.isLoggedIn();
 }
 
-  createTeam(name): Observable<any> {
-    return this.http.post("http://localhost:8000/api/v1/teams/", name);
-  }
+createTeam(teamData): Observable<any> {
+  return this.http.post("http://localhost:8000/api/v1/teams/new", teamData);
+}
+
+redirectToCheckout(sessionId: string){
+
+}
+
 }

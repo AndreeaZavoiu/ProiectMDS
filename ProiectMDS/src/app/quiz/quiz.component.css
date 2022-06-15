@@ -2,22 +2,17 @@
 .container {
   margin: auto;
   width: 50%;
-  border: 1px solid aquamarine;
-  border-radius: 10px;;
+  border-radius: 20px;;
   padding: 30px;
-  background: rgb(152, 205, 187);
+  background: rgb(220, 220, 220);
   margin-top: 30px;
 }
 
 body {
-  /* background-image: url("https://cdn.pixabay.com/photo/2020/07/08/11/07/imagination-5383470_1280.jpg"); */
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),  url(src\app\imgs\ceasuri.jpg);
   background-size: cover;
-  background-color: forestgreen;
   height: 100vh;
 }
-
-
 
 .footer-container {
   padding-top: 35px;

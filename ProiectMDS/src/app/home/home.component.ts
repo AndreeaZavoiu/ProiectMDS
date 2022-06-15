@@ -16,13 +16,16 @@ export class HomeComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  constructor(//private apiService: ApiService
-  ){
+  constructor(private apiService: ApiService){
 
   }
   
   pret: number;
   addToCart(pret: number){
 
+  }
+
+  redirectToCheckout(sessionId: string){
+    
   }
 }

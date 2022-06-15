@@ -41,5 +41,7 @@ export class TreasureHuntComponent implements OnInit {
   after(){
 
   }
+
+  startTH(){}
   
 }

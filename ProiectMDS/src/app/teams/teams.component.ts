@@ -9,15 +9,18 @@ import { ApiService } from '../api.service';
 })
 
 export class TeamsComponent implements OnInit {
-  players = [{title: 'testNumePlayer'}];
-  teams = [{name: 'testNumeEchipa'}];
-  name = "";
+  players = [{title: 'Player1'}];
+  teams;
 
   constructor(private api: ApiService) { 
     this.getPlayers();
   }
 
   ngOnInit(): void {
+    this.teams =  {
+      name: '',
+      activity: ''
+    }
   }
 
   getPlayers = () => {
@@ -43,7 +46,7 @@ export class TeamsComponent implements OnInit {
     )
   }
 
-  createTeam = (name) => {
-    this.api.createTeam(name).subscribe();
+  createTeam = () => {
+    this.api.createTeam(this.teams).subscribe();
   }
 }
