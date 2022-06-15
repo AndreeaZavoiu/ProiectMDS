@@ -1,0 +1,57 @@
+<body>
+  <div class="paris">
+    <h2>Felicitari! Ai trect la indiciul urmator!</h2>
+    <p>
+      Desi esti in Bucuresti, supranumit chiar Micul Paris, cu o poza anumita poti sa pacalesti necunoscatorii ca ai dat o fuga pana la Paris. <br />
+      Urcati aici poza cu care sa ne convingeti! <br />
+      <br />
+    </p>
+      <img [src]="url" height="200" />
+    <div class="b">
+      <input class="btn btn-secondary" type="file" (change)="onselectFile($event)" /> <br />
+      <input class="btn btn-secondary" type="submit" value="Trimite" (click)="onClick()"> <br />
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <div class="footer-container">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+      <h5>The company</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Packt publisher</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-2">
+      <h5>Social</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-2">
+      <h5>Support</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy police</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Help desk</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <address>
+        <strong>Name, Inc.</strong><br><br>
+        Address line 1<br>
+        Address line 2<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+      </address>
+    </div>
+  </div>
+</footer>
