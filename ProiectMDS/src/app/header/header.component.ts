@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import { ApiService } from '../api.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private headerService: ApiService) { }
+  constructor(private headerService: ApiService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +23,10 @@ export class HeaderComponent implements OnInit {
           alert('Logged out!');
       }, error => console.log('error', error)
     )
+  }
+
+  profil(){
+    this.router.navigateByUrl('profil');
   }
 
 }

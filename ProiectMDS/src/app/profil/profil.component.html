@@ -1,13 +1,16 @@
 <app-header></app-header>
-
-<div class = "players">
-    <h1>Players</h1>
+<body><br><br>
+<div class = "container1">
+    <h1>Profile</h1>
     <ul>
         <li *ngFor="let player of players">
-            <h2 (click)="playerClicked(player)">{{player.title}}</h2>
+            <h2 (click)="playerClicked(player)">Username: {{player.username}}</h2>
         </li>
     </ul>
+    <p>Enter your company</p>
+    <input name="name" ngModel placeholder="Company" id="name" type="text" class="input-field" />
 </div>
+</body>
 
 
 <footer>

@@ -44,9 +44,7 @@ export class TeamsComponent implements OnInit {
 
   playerClicked = (player) => {
     this.api.getOnePlayer(player.id).subscribe(
-      data => {
-        
-      },
+      data => { console.log('playerClicked')} ,
       error => {
         console.log(error); // TODO: alert box -> https://jasonwatmore.com/post/2019/07/05/angular-8-alert-toaster-notifications
         // alert(`There are no players!`);
