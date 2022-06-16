@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 
 export class TeamsComponent implements OnInit {
-  players = [{title: 'Player1'}];
+  players ;
   teams;
   activities;
 
@@ -19,16 +19,22 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.teams =  {
-      id:'',
       name: '',
-      location: ''
+      activity: Number
     };
 
     this.activities = {
       id:'',
       name:'',
       location:''
-    }
+    };
+
+    
+  this.players = { 
+    username: '' 
+  };
+
+
   }
 
   getPlayers = () => {
@@ -52,11 +58,60 @@ export class TeamsComponent implements OnInit {
     )
   }
 
+  // createTeam = () => {
+  //   this.api.createTeam(this.teams).subscribe();
+  // }
   createTeam = () => {
-    this.api.createTeam(this.teams).subscribe();
+
+    // this.teams.name = name;
+
+    // this.teams.activity = activity;
+
+    this.api.createTeam(this.teams).subscribe(
+
+      data => {console.log(this.teams.activity)},
+
+      error => { 
+        console.log(this.teams.name);
+        console.log(this.teams.activity);
+        console.log('nu merge createTeam'); }
+
+    );
+
   }
 
   chooseActivity = () => {
     this.api.chooseActivity(this.activities).subscribe();
   }
+
+  getActivity = () => {
+
+    this.api.getActivity().subscribe(
+
+      data => {
+
+        this.activities= data;
+
+      }
+
+    );
+
+  }
+
+  teamClicked = (team) => {
+
+    this.api.getTeam(team.id).subscribe(
+
+      data => { console.log('TeamClicked')} ,
+
+      error => {
+
+        console.log(error);
+
+      }
+
+    )
+
+  }
+
 }

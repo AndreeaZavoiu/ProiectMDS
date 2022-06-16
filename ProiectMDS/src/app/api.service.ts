@@ -90,4 +90,19 @@ chooseActivity(activity):  Observable<any> {
   return this.http.post("http://localhost:8000/api/v1/activities", activity);
 }
 
+getActivity():  Observable<any> {
+
+  return this.http.get("http://localhost:8000/api/v1/activities");
+
+}
+
+
+getTeam(id): Observable<any> {
+
+  return this.http.get('http://localhost:8000/api/v1/teams/' + '/' + id + '/',
+
+            {headers: this.httpHeaders});
+
+}
+
 }

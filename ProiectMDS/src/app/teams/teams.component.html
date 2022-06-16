@@ -5,7 +5,7 @@
         <h1>Players</h1>
         <ul>
             <li *ngFor="let player of players">
-                <h2 (click)="playerClicked(player)">{{player.title}}</h2>
+                <h2 (click)="playerClicked(player)">{{player.username}}</h2>
             </li>
         </ul>
     </div>
@@ -16,13 +16,16 @@
         <div class="main">
             <h3>Creeaza echipe introducandu-le numele:</h3>
             <div class="input-fields">
-                <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" /><br>
+                <input name="name" [(ngModel)]="teams.name" placeholder="Name" id="name" type="text" class="input-field" /><br>
                 <!-- <input  *ngFor="let activity of activities" name="activity" ngModel placeholder="Activity" id="name" type="text" class="input-field" /> -->
 
-                <select (click)="chooseActivity()">
+                <select (click)="getActivity()">
                     <option [ngValue]="null" disabled>Select Activity</option>
-                    <option *ngFor="let activity of activities" [ngValue]="activity.id">{{activity.name}}</option>
+                    <option *ngFor="let activity of activities; let i = index" [ngValue]="activity[i].id" [(ngModel)]="activity[i].id">{{activity[i].name}}</option>
+                    <!-- <input hidden [(ngModel)]="teams.activity.id"/> -->
+                    
                 </select>
+                <!-- <input placeholder="Activity"  type="text" class="input-field"/> -->
             </div>
             <button (click)="createTeam()">Add Team </button>
         </div>
