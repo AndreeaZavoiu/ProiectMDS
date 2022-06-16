@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { RulesComponent } from './rules/rules.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
+import { ArcComponent } from './arc/arc.component';
+import { RomaComponent } from './roma/roma.component';
+import { FinalComponent } from './final/final.component';
 
 
 const routes: Routes = [
@@ -24,7 +27,10 @@ const routes: Routes = [
   { path : 'quiz', component: QuizComponent},
   { path: 'question', component: QuestionComponent },
   { path: 'rules', component: RulesComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'final', component: FinalComponent },
+  { path: 'roma', component: RomaComponent },
+  { path: 'paris', component: ArcComponent }
 ];
 
 @NgModule({

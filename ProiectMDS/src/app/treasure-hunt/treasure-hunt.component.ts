@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NgxWheelComponent } from 'ngx-wheel';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-treasure-hunt',
@@ -9,7 +10,9 @@ import { ApiService } from '../api.service';
 })
 export class TreasureHuntComponent implements OnInit {
 
-  constructor(private api: ApiService) { 
+  @ViewChild('res') nameKey!: ElementRef;
+
+  constructor(private api: ApiService, private router: Router) {
     this.getPlayers();
   }
 
@@ -42,6 +45,11 @@ export class TreasureHuntComponent implements OnInit {
 
   }
 
-  startTH(){}
+  onClick() {
+    if (this.nameKey.nativeElement.value === "girafa" || this.nameKey.nativeElement.value === "Girafa"
+      || this.nameKey.nativeElement.value === "GIRAFA") {
+      this.router.navigate(['/paris']);
+    }
+  }
   
 }
