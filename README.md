@@ -41,8 +41,8 @@ Coding error: the method on click is not implemented and attached to the button
 Steps: On any page, when clicking the person icon in the header to access the profile page with the details of the user, the button does nothing. It should redirect the user to its profile page. Fixed by implementing the method profil() to navigateByUrl and linked in button (click) attribute.  
 ![image](https://user-images.githubusercontent.com/79314110/174129109-b08d9904-da4d-4ed7-bbcc-6b155b3c0f6a.png)    
 
-## - [x] Source control (branch creation, merge, minim 10 commits)
+## Source control (branch creation, merge, minim 10 commits)
 
-- [x] ## Teste automate
+## Teste automate
 
-- [x] ## Refactoring, code standards
+## Refactoring, code standards
