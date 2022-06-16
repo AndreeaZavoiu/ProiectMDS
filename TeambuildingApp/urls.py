@@ -42,5 +42,6 @@ urlpatterns = [
     
     path('api/v1/activities/', TeambuildingApp.users.api_views.ActivityList.as_view()),
     path('api/v1/activities/new', TeambuildingApp.users.api_views.ActivityCreate.as_view()),
+    path('api/v1/activities/<int:id>', TeambuildingApp.users.api_views.ActivityCreate.as_view()),
     
 ]
