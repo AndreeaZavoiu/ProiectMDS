@@ -19,14 +19,13 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.teams =  {
-      name: '',
-      activity: Number
+      name: ''
     };
 
     this.activities = {
       id:'',
       name:'',
-      location:''
+      location: ''
     };
 
     
@@ -103,6 +102,21 @@ export class TeamsComponent implements OnInit {
     this.api.getTeam(team.id).subscribe(
 
       data => { console.log('TeamClicked')} ,
+
+      error => {
+
+        console.log(error);
+
+      }
+
+    )
+
+  }
+  activityClicked = (activity) => {
+
+    this.api.getOneActivity(activity.id).subscribe(
+
+      data => { console.log('activityClicked')} ,
 
       error => {
 
