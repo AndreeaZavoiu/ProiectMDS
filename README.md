@@ -17,3 +17,8 @@ As an admin, I want to delete the players / companies.
 As a dev, I want to learn Django in a month so that we finish the project in 2 months.
 As a dev, I want to finish the frontend in 2 months.
 
+## Backlog creation
+
+## Design/Arhitectura/UML
+
+## Bug Reporting
