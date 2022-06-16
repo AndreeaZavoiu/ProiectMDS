@@ -11,6 +11,7 @@ import { ApiService } from '../api.service';
 export class TeamsComponent implements OnInit {
   players = [{title: 'Player1'}];
   teams;
+  activities;
 
   constructor(private api: ApiService) { 
     this.getPlayers();
@@ -18,8 +19,15 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.teams =  {
+      id:'',
       name: '',
-      activity: ''
+      location: ''
+    };
+
+    this.activities = {
+      id:'',
+      name:'',
+      location:''
     }
   }
 
@@ -48,5 +56,9 @@ export class TeamsComponent implements OnInit {
 
   createTeam = () => {
     this.api.createTeam(this.teams).subscribe();
+  }
+
+  chooseActivity = () => {
+    this.api.chooseActivity(this.activities).subscribe();
   }
 }

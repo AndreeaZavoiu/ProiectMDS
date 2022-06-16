@@ -1,6 +1,7 @@
-<body>
+<app-header></app-header>
+<body><br><br><br>
   <div class="paris">
-    <h2>Felicitari! Ai trect la indiciul urmator!</h2>
+    <h2>Felicitari! Ai trecut la indiciul urmator!</h2>
     <p>
       Desi esti in Bucuresti, supranumit chiar Micul Paris, cu o poza anumita poti sa pacalesti necunoscatorii ca ai dat o fuga pana la Paris. <br />
       Urcati aici poza cu care sa ne convingeti! <br />
@@ -9,7 +10,7 @@
       <img [src]="url" height="200" />
     <div class="b">
       <input class="btn btn-secondary" type="file" (change)="onselectFile($event)" /> <br />
-      <input class="btn btn-secondary" type="submit" value="Trimite" (click)="onClick()"> <br />
+      <input class="btn btn-dark" type="submit" value="Trimite" (click)="onClick()"> <br />
     </div>
   </div>
 

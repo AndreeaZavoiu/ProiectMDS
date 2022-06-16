@@ -28,6 +28,7 @@ import { RulesComponent } from './rules/rules.component';
 import { ArcComponent } from './arc/arc.component';
 import { RomaComponent } from './roma/roma.component';
 import { FinalComponent } from './final/final.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FinalComponent } from './final/final.component';
     RulesComponent,
     ArcComponent,
     RomaComponent,
-    FinalComponent
+    FinalComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,

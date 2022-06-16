@@ -1,15 +1,19 @@
 body {
   padding: 4%;
-  background-image: url("https://images.unsplash.com/photo-1564395832344-4d5520ae70c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1564395832344-4d5520ae70c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80"); */
+  background-image: url(../imgs/coloseum.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
 .flex {
   align-content: center;
   margin: auto;
   width: 40%;
+  margin-top:60px;
   border-radius: 20px;
   padding: 55px;
-  background-color: rgb(192,192,192);
+  background-color:	#A9A9A9;
 }
 
 

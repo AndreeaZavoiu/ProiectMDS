@@ -13,7 +13,7 @@ import { TreasureHuntComponent } from './treasure-hunt/treasure-hunt.component';
 import { ArcComponent } from './arc/arc.component';
 import { RomaComponent } from './roma/roma.component';
 import { FinalComponent } from './final/final.component';
-
+import {ProfilComponent} from './profil/profil.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'final', component: FinalComponent },
   { path: 'roma', component: RomaComponent },
-  { path: 'paris', component: ArcComponent }
+  { path: 'paris', component: ArcComponent },
+  { path: 'profil', component: ProfilComponent }
 ];
 
 @NgModule({

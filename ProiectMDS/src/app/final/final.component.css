@@ -1,6 +1,9 @@
 body {
   padding: 4%;
-  background-image: url("https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=972&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=972&q=80"); */
+  background-image: url(../imgs/landscape.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 .final {
   align-content: center;
@@ -9,6 +12,11 @@ body {
   border-radius: 20px;
   padding: 30px;
   background-color: rgb(192,192,192);
+}
+
+button{
+  margin-top: 10px;
+  margin-left:45%;
 }
 
 .footer-container {

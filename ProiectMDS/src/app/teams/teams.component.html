@@ -17,13 +17,12 @@
             <h3>Creeaza echipe introducandu-le numele:</h3>
             <div class="input-fields">
                 <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" /><br>
-                <input name="activity" ngModel placeholder="Activity" id="name" type="text" class="input-field" />
-                <!-- <select id="cars" name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select> -->
+                <!-- <input  *ngFor="let activity of activities" name="activity" ngModel placeholder="Activity" id="name" type="text" class="input-field" /> -->
+
+                <select (click)="chooseActivity()">
+                    <option [ngValue]="null" disabled>Select Activity</option>
+                    <option *ngFor="let activity of activities" [ngValue]="activity.id">{{activity.name}}</option>
+                </select>
             </div>
             <button (click)="createTeam()">Add Team </button>
         </div>

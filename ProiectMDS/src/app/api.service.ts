@@ -22,7 +22,7 @@ export class ApiService {
   }
 
   getOnePlayer(id): Observable<any> {
-    return this.http.get(this.baseurl + '/teams/' + id + '/', 
+    return this.http.get('http://localhost:8000/user/profile' + '/' + id + '/', 
               {headers: this.httpHeaders});
   }
 
@@ -84,6 +84,10 @@ createTeam(teamData): Observable<any> {
 
 redirectToCheckout(sessionId: string){
 
+}
+
+chooseActivity(activity):  Observable<any> {
+  return this.http.post("http://localhost:8000/api/v1/activities", activity);
 }
 
 }
