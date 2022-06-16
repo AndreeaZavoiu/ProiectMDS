@@ -78,3 +78,7 @@ class UsersFilteredByCompanyList(ListAPIView):
     #queryset = Details.objects.filter()
     serializer_class = DetailsSerializer
 
+class GetActivityById(RetrieveUpdateDestroyAPIView):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+
