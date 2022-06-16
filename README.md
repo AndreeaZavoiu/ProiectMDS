@@ -1,8 +1,8 @@
 # ProiectMDS
 
 ## Demo
-
-
+  
+  
 ## User Stories
 
 - As a player, I want to mention my company’s ID or name in the login/signup section, so that I can participate in their activities.  
@@ -46,6 +46,7 @@ Steps: On any page, when clicking the person icon in the header to access the pr
  
  
 ## Teste automate
--> TeambuildingApp -> users -> test.py
-
+-> TeambuildingApp -> users -> tests.py
+  
+  
 ## Refactoring, code standards
