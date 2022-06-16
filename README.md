@@ -22,15 +22,15 @@
 https://trello.com/b/CvpcXIGB/cea  
 ![image](https://user-images.githubusercontent.com/79314110/174137219-3de72179-8c85-47e6-8b9f-e6c984faef7e.png)  
   
-## Design/Arhitectura/UML
-
+## Design/Arhitectura/UML  
 User case UML   
-<img width="773" alt="UML-user case" src="https://user-images.githubusercontent.com/73405732/174133895-de6fc459-02e7-4955-9691-79f3b4d4b5b0.PNG">
+<img width="773" alt="UML-user case" src="https://user-images.githubusercontent.com/73405732/174133895-de6fc459-02e7-4955-9691-79f3b4d4b5b0.PNG">  
+  
   
 ## Bug Reporting
 Product: Frontend  
 Version: Final  
-Component: Profile Button  
+Component: Profile    
 Priority: P2 (Fix as soon as possible)  
 Severity: Trivial (Some UI enhancements)  
 Status: Now fixed  
@@ -39,10 +39,13 @@ Description: The profile button in the header (person icon) is not redirecting t
 Coding error: the method on click is not implemented and attached to the button  
 Steps: On any page, when clicking the person icon in the header to access the profile page with the details of the user, the button does nothing. It should redirect the user to its profile page. Fixed by implementing the method profil() to navigateByUrl and linked in button (click) attribute.  
 ![image](https://user-images.githubusercontent.com/79314110/174129109-b08d9904-da4d-4ed7-bbcc-6b155b3c0f6a.png)    
-
+ 
+ 
 ## Source control (branch creation, merge, minim 10 commits)
 ![image](https://user-images.githubusercontent.com/79314110/174137538-5256be06-0acf-4b4c-87f7-c5ead2edac52.png)  
-
+ 
+ 
 ## Teste automate
+-> TeambuildingApp -> users -> test.py
 
 ## Refactoring, code standards
