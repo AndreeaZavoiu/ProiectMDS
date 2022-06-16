@@ -44,6 +44,7 @@ Steps: On any page, when clicking the person icon in the header to access the pr
 ![image](https://user-images.githubusercontent.com/79314110/174129109-b08d9904-da4d-4ed7-bbcc-6b155b3c0f6a.png)    
 
 ## Source control (branch creation, merge, minim 10 commits)
+![image](https://user-images.githubusercontent.com/79314110/174137538-5256be06-0acf-4b4c-87f7-c5ead2edac52.png)  
 
 ## Teste automate
 
