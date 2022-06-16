@@ -21,7 +21,9 @@
 - As a dev, I want to finish the frontend in 2 months.
 
 
-## Backlog creation
+## Backlog creation  
+https://trello.com/b/CvpcXIGB/cea  
+![image](https://user-images.githubusercontent.com/79314110/174137219-3de72179-8c85-47e6-8b9f-e6c984faef7e.png)  
 
 ## Design/Arhitectura/UML
 
