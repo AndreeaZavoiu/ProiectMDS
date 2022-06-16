@@ -94,12 +94,20 @@ getActivity():  Observable<any> {
 
   return this.http.get("http://localhost:8000/api/v1/activities");
 
-}
+  }
+
+  getOneActivity(id): Observable<any> {
+    console.log("get one activity");
+    return this.http.get('http://localhost:8000/api/v1/activities' + '/' + id + '/',
+
+      { headers: this.httpHeaders });
+
+  }
 
 
 getTeam(id): Observable<any> {
 
-  return this.http.get('http://localhost:8000/api/v1/teams/' + '/' + id + '/',
+  return this.http.get('http://localhost:8000/api/v1/teams' + '/' + id + '/',
 
             {headers: this.httpHeaders});
 
