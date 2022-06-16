@@ -17,7 +17,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllPlayers(): Observable<any> {
-    return this.http.get("http://localhost:8000/api/v1/teams/", 
+    return this.http.get("http://localhost:8000/user/users/", 
               {headers: this.httpHeaders});
   }
 

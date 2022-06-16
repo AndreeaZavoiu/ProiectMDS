@@ -9,10 +9,10 @@ from TeambuildingApp.users.models import *
 class TeamList(ListAPIView):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
 class TeamCreate(CreateAPIView):
-    serializer_class = TeamSerializer
+    serializer_class = CreateTeamSerializer
 
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
