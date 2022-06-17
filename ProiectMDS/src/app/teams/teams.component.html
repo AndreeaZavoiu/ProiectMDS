@@ -16,12 +16,12 @@
         <div class="main">
             <h3>Creeaza echipe introducandu-le numele:</h3>
             <div class="input-fields">
-                <input name="name" [(ngModel)]="teams.name" placeholder="Name" id="name" type="text" class="input-field" /><br>
+                <input name="name" [(ngModel)]="team.name" placeholder="Name" id="name" type="text" class="input-field" /><br>
                 <!-- <input  *ngFor="let activity of activities" name="activity" ngModel placeholder="Activity" id="name" type="text" class="input-field" /> -->
 
-                <select (click)="getActivity()">
+                <select [(ngModel)] = "team.activity">
                     <option [ngValue]="null" disabled>Select Activity</option>
-                    <option *ngFor="let activity of activities; let i = index" [ngValue]="activity[i].id" [(ngModel)]="activity[i].id">{{activity[i].name}}</option>
+                    <option *ngFor="let activity of activities" [ngValue]="activity.id">{{activity.name}}</option>
                     <!-- <input hidden [(ngModel)]="teams.activity.id"/> -->
                     
                 </select>
@@ -31,13 +31,13 @@
         </div>
     </div>
 
-    <div class="teams">
+    <!-- <div class="teams">
         <ul>
-            <li *ngFor="let team of teams">
+            <li *ngFor="let team of team">
                 <h2 (click)="teamClicked(team)">{{team.name}}</h2>
             </li>
         </ul>
-    </div>
+    </div> -->
 </div>
 
 

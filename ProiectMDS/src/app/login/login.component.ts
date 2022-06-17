@@ -12,6 +12,7 @@ import { ApiService } from '../api.service';
   export class LoginComponent implements OnInit{
     
     form:FormGroup;
+ 
 
     constructor(private fb:FormBuilder, 
                  private authService: ApiService, 
@@ -42,7 +43,7 @@ import { ApiService } from '../api.service';
                     },
                     (err) =>  {
                       console.log("Ups! That's embarassing");
-                      alert("Ups!");
+                      alert("Ups, wrong credentials!");
                       console.log(err);
                     }
                 );

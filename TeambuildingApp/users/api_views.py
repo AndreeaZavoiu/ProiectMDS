@@ -4,7 +4,7 @@ from TeambuildingApp.users.serializers import *
 from TeambuildingApp.users.models import *
 from rest_framework.permissions import IsAuthenticated
 from TeambuildingApp.users.models import *
-
+from rest_framework.response import Response
 
 class TeamList(ListAPIView):
     queryset = Team.objects.all()
@@ -69,16 +69,23 @@ class DetailsRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
             details = response.data
             cache.set('details_data_{}'.format(details['user_id']),{
                 'company_name' : details['company_name'],
-                'is_staff' : details['is_staff']
+                #'is_staff' : (if details.is_staff != None then details['is_staff'] else False)
             })
 
         return response
 
 class UsersFilteredByCompanyList(ListAPIView):
-    #queryset = Details.objects.filter()
-    serializer_class = DetailsSerializer
+    serializer_class = UserSerializer
+
+    def list(self, request):
+        queryset = User.objects.all()
+        currentProfile = Details.objects.filter(user_id =self.request.user.id).first()
+        profileIdx = [profile.user_id for profile in Details.objects.filter(company_name = currentProfile.company_name)]
+        queryset = queryset.filter(id__in = profileIdx)
+        serializer = UserSerializer(queryset, many = True)
+        return Response(serializer.data)
+
 
 class GetActivityById(RetrieveUpdateDestroyAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
-
