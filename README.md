@@ -49,6 +49,17 @@ Steps: On any page, when clicking the person icon in the header to access the pr
  
 ## Teste automate
 -> TeambuildingApp -> users -> tests.py
+![image](https://user-images.githubusercontent.com/79314110/174237906-0a416f04-6984-4074-847a-7529b2ff00d4.png)
+
   
-  
+## Build tool
+The project was developed in Django (backend) and Angular (frontend).
+We have used Visual Studio as the IDE for the backend and the included build tool for Django projects.
+For the frontend, we have used Visual Studio Code as the IDE and NPM as the build tool.
+
+
 ## Refactoring, code standards
+- Typical naming conventions for React and ASP.NET apps (PascalCase for component names, camelCase for non-components, attributes, inline styles)  
+- Easy to follow project structure - using directories such as components/, pages/, styles/, utils/  
+- Splitting the code into multiple files instead of writing a big file  
+- 
