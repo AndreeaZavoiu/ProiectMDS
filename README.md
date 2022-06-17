@@ -30,16 +30,16 @@ ERD pe baza de date
   
   
 ## Bug Reporting
-Product: Frontend  
-Version: Final  
-Component: Profile    
-Priority: P2 (Fix as soon as possible)  
-Severity: Trivial (Some UI enhancements)  
-Status: Now fixed  
-Assign To: Bianca/Andreea  
-Description: The profile button in the header (person icon) is not redirecting the user to the profile page when clicked. Instead, it does nothing.  
-Coding error: the method on click is not implemented and attached to the button  
-Steps: On any page, when clicking the person icon in the header to access the profile page with the details of the user, the button does nothing. It should redirect the user to its profile page. Fixed by implementing the method profil() to navigateByUrl and linked in button (click) attribute.  
+:black_small_square: Product: Frontend  
+:black_small_square: Version: Final  
+:black_small_square: Component: Profile    
+:black_small_square: Priority: P2 (Fix as soon as possible)  
+:black_small_square: Severity: Trivial (Some UI enhancements)  
+:black_small_square: Status: Now fixed  
+:black_small_square: Assign To: Bianca/Andreea  
+:black_small_square: Description: The profile button in the header (person icon) is not redirecting the user to the profile page when clicked. Instead, it does nothing.  
+:black_small_square: Coding error: the method on click is not implemented and attached to the button  
+:black_small_square: Steps: On any page, when clicking the person icon in the header to access the profile page with the details of the user, the button does nothing. It should redirect the user to its profile page. Fixed by implementing the method profil() to navigateByUrl and linked in button (click) attribute.  
 ![image](https://user-images.githubusercontent.com/79314110/174129109-b08d9904-da4d-4ed7-bbcc-6b155b3c0f6a.png)    
  
  
