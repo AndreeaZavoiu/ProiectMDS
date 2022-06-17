@@ -30,11 +30,13 @@ urlpatterns = [
     path('user/', include('TeambuildingApp.users.urls')),
     path('user/profile/<int:user_id>', TeambuildingApp.users.api_views.DetailsRetrieveUpdateDestroy.as_view()),
     path('user/profile', TeambuildingApp.users.api_views.DetailsList.as_view()),
+    path('user/companystaff', TeambuildingApp.users.api_views.UsersFilteredByCompanyList.as_view()),
     
     path('api/auth/', include('knox.urls')),
     path('api/auth/register', RegisterAPI.as_view()),
     path('api/auth/login', LoginAPI.as_view()),
     path('api/auth/logout', knox_views.LogoutView.as_view(), name='knox_logout'),
+    
 
     path('api/v1/teams/', TeambuildingApp.users.api_views.TeamList.as_view()),
     path('api/v1/teams/new', TeambuildingApp.users.api_views.TeamCreate.as_view()),

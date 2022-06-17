@@ -2,7 +2,6 @@ from rest_framework.test import APITestCase
  
 from TeambuildingApp.users.models import *
  
-'''
 class TeamCreateTestCase(APITestCase):
     def test_create_team(self):
         initial_team_count = Team.objects.count()
@@ -76,7 +75,7 @@ class TeamListTestCaseSec(APITestCase):
         self.assertIsNotNone(response.data[0]['id'])
         self.assertIsNotNone(response.data[0]['name'])
 
-'''
+
 class TeamUpdateTestCase(APITestCase):
     def test_create_update_team(self):
         initial_team_count = Team.objects.count()
@@ -93,13 +92,12 @@ class TeamUpdateTestCase(APITestCase):
         
         team = Team.objects.first()
         team_id = Team.objects.first().id
-        print("din nou",)
-        print("aici",team)
         response = self.client.patch(
-            '/api/v1/teams/{}'.format(team.id),{
+            '/api/v1/teams/{}'.format(team_id),{
                 'name': 'Testoase Ninja',
             },
             format = 'json',
         )
-    #updated = Team.objects.get(id = team.id)
-    #self.assertEqual(updated.name,'Testoase Ninja')
+        updated = Team.objects.filter(id = team_id)
+        self.assertEqual(updated[0].name,'Testoase Ninja')
+
