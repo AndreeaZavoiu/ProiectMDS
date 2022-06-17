@@ -62,4 +62,4 @@ For the frontend, we have used Visual Studio Code as the IDE and NPM as the buil
 - Typical naming conventions for Angular and Django apps  
 - Easy to follow project structure - using directories such as components/, pages/, styles/, utils/  
 - Splitting the code into multiple files instead of writing a big file  
-- 
+
