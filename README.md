@@ -20,12 +20,13 @@
   
 ## Backlog creation  
 https://trello.com/b/CvpcXIGB/cea  
-![image](https://user-images.githubusercontent.com/79314110/174137219-3de72179-8c85-47e6-8b9f-e6c984faef7e.png)  
+![image](https://user-images.githubusercontent.com/79314110/174239781-84f750a3-960f-40fc-a955-1bdc4b6f6409.png)  
+
   
-## Design/Arhitectura/UML  
+## Design/UML  
 User case UML   
 <img width="773" alt="UML-user case" src="https://user-images.githubusercontent.com/73405732/174133895-de6fc459-02e7-4955-9691-79f3b4d4b5b0.PNG">  
-ERD pe baza de date
+ERD for the database
 ![image](https://user-images.githubusercontent.com/79314110/174236999-98542c25-4bb1-417e-9aa2-18dd65d93379.png)
   
   
@@ -47,7 +48,7 @@ ERD pe baza de date
 ![image](https://user-images.githubusercontent.com/79314110/174137538-5256be06-0acf-4b4c-87f7-c5ead2edac52.png)  
  
  
-## Teste automate
+## Automated tests
 -> TeambuildingApp -> users -> tests  
 ![image](https://user-images.githubusercontent.com/79314110/174237906-0a416f04-6984-4074-847a-7529b2ff00d4.png)
 
@@ -58,7 +59,7 @@ We have used Visual Studio as the IDE for the backend and the included build too
 For the frontend, we have used Visual Studio Code as the IDE and NPM as the build tool.
 
 
-## Refactoring, code standards
+## Code standards
 - Typical naming conventions for Angular and Django apps  
 - Easy to follow project structure - using directories such as components/, pages/, styles/, utils/  
 - Splitting the code into multiple files instead of writing a big file  
