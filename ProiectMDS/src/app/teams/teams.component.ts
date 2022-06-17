@@ -11,7 +11,10 @@ import { ApiService } from '../api.service';
 export class TeamsComponent implements OnInit {
   players ;
   team;
+  member;
   activities: Array<any>;
+  teams: Array<any>;
+  allPlayers: Array<any>;
 
   constructor(private api: ApiService) { 
     this.getPlayers();
@@ -19,15 +22,22 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit(): void {
     this.team =  {
+      id: '',
       name: '',
       activity: '',
     };
     this.getActivities();
 
-    
+    this.getTeams();
+    this.getAllPlayers();
   this.players = { 
+    id: '',
     username: '' 
   };
+  this.member = {
+    team_id: '',
+    user_id: ''
+  }
 
 
   }
@@ -75,8 +85,22 @@ export class TeamsComponent implements OnInit {
 
   }
 
+  createMember = () => {
+    this.api.createMember(this.member).subscribe(
+      data => {console.log('aici')},
+      error => {console.log(this.member.user_id)
+      console.log(this.member.team_id)}
+    );
+  }
+
   chooseActivity = () => {
     this.api.chooseActivity(this.activities).subscribe();
+  }
+  chooseTeam = () => {
+    this.api.chooseTeam(this.teams).subscribe();
+  }
+  choosePlayer = () => {
+    this.api.choosePlayer(this.allPlayers).subscribe;
   }
 
   private getActivities() {
@@ -91,6 +115,22 @@ export class TeamsComponent implements OnInit {
 
     );
 
+  }
+
+  private getTeams() {
+    this.api.getTeams().subscribe(
+      data => {
+        this.teams = data;
+      }
+    );
+  }
+
+  private getAllPlayers() {
+    this.api.getAllPlayers().subscribe(
+      data => {
+        this.allPlayers = data;
+      }
+    );
   }
 
   teamClicked = (team) => {
