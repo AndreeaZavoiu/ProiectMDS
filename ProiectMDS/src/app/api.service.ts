@@ -11,7 +11,7 @@ export class ApiService {
     user: any = undefined;
 
     // user.isStaff 
-    
+
     baseurl = "http://localhost:8000"; // url-ul bazei de date din backend
     httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
     
@@ -27,8 +27,7 @@ export class ApiService {
       return this.user;
     }
     getAllPlayers(): Observable<any> {
-      return this.http.get("http://localhost:8000/user/users/", 
-                {headers: this.httpHeaders});
+      return this.http.get("http://localhost:8000/user/users");
     }
 
     getOnePlayer(id): Observable<any> {
@@ -97,6 +96,10 @@ export class ApiService {
     return this.http.post("http://localhost:8000/api/v1/teams/new", teamData);
   }
 
+  createMember(memberData): Observable<any> {
+    return this.http.post("http://localhost:8000/api/v1/members/new", memberData);
+  }
+
   redirectToCheckout(sessionId: string){
 
   }
@@ -110,8 +113,16 @@ export class ApiService {
     return this.http.get("http://localhost:8000/api/v1/activities");
 
   }
+  chooseTeam(team): Observable<any> {
+    return this.http.post("http://localhost:8000/api/v1/activities", team);
+  }
+  getTeams(): Observable<any> {
+    return this.http.get("http://localhost:8000/api/v1/teams");
+  }
 
-
+  choosePlayer(player): Observable<any> {
+    return this.http.post("http://localhost:8000/user/users", player);
+  }
   getTeam(id): Observable<any> {
 
     return this.http.get('http://localhost:8000/api/v1/teams/' + '/' + id + '/',

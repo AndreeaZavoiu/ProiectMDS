@@ -4,7 +4,7 @@
     <div class = "players">
         <h1>Players</h1>
         <ul>
-            <li *ngFor="let player of players">
+            <li *ngFor="let player of players  | slice:0:5">
                 <h2 (click)="playerClicked(player)">{{player.username}}</h2>
             </li>
         </ul>
@@ -27,7 +27,30 @@
                 </select>
                 <!-- <input placeholder="Activity"  type="text" class="input-field"/> -->
             </div>
-            <button (click)="createTeam()">Add Team </button>
+            <button class="btn btn-dark" (click)="createTeam()">Add Team </button>
+
+            <h3>Asigneaza playeri la echipe</h3>
+            <div class="input-fields">
+                <select [(ngModel)] = "member.team_id">
+                    <option [ngValue]="null" disabled>Select Team</option>
+                    <option *ngFor="let team of teams" [ngValue]="team.id">{{team.name}}</option>
+                    <!-- <input hidden [(ngModel)]="teams.activity.id"/> -->
+                </select>
+
+                <br>
+
+                <select [(ngModel)] = "member.user_id">
+                    <option [ngValue]="null" disabled>Select Player</option>
+                    <option *ngFor="let player of allPlayers" [ngValue]="player.id">{{player.username}}</option>
+                    <!-- <input hidden [(ngModel)]="teams.activity.id"/> -->
+                    
+                </select>
+                <br>
+                <!-- <input  *ngFor="let activity of activities" name="activity" ngModel placeholder="Activity" id="name" type="text" class="input-field" /> -->
+                
+                <!-- <input placeholder="Activity"  type="text" class="input-field"/> -->
+            </div>
+            <button class="btn btn-dark" (click)="createMember()">Assign </button>
         </div>
     </div>
 
