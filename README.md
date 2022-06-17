@@ -25,6 +25,8 @@ https://trello.com/b/CvpcXIGB/cea
 ## Design/Arhitectura/UML  
 User case UML   
 <img width="773" alt="UML-user case" src="https://user-images.githubusercontent.com/73405732/174133895-de6fc459-02e7-4955-9691-79f3b4d4b5b0.PNG">  
+ERD pe baza de date
+![image](https://user-images.githubusercontent.com/79314110/174236999-98542c25-4bb1-417e-9aa2-18dd65d93379.png)
   
   
 ## Bug Reporting
